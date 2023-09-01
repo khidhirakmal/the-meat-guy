@@ -1,6 +1,4 @@
 import mongoose from "mongoose";
-// import Product from "./product";
-// import User from "./user";
 
 const OrderSchema = new mongoose.Schema(
   {

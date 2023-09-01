@@ -19,6 +19,7 @@ export async function GET(req) {
       );
 
       if (extractAllOrders) {
+        console.log("extract orders:", extractAllOrders);
         return NextResponse.json({
           success: true,
           data: extractAllOrders,
@@ -32,7 +33,7 @@ export async function GET(req) {
     } else {
       return NextResponse.json({
         success: false,
-        message: "You are not authticated!",
+        message: "You are not authenticated!",
       });
     }
   } catch (error) {

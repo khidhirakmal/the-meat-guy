@@ -93,7 +93,7 @@ export default function Checkout() {
             0
           ),
           isPaid: true,
-          isProcessing: true,
+          isProcessing: true, // Admin will process and isProcessing will be false and marked as processed
           paidAt: new Date(),
         };
 
@@ -150,7 +150,7 @@ export default function Checkout() {
 
     const createLineItems = cartItems.map((item) => ({
       price_data: {
-        currency: "usd",
+        currency: "sgd",
         product_data: {
           images: [item.productID.imageUrl],
           name: item.productID.name,
@@ -173,7 +173,7 @@ export default function Checkout() {
     console.log(error);
   }
 
-  // console.log(checkoutFormData);
+  console.log(checkoutFormData);
 
   useEffect(() => {
     if (orderSuccess) {

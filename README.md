@@ -5,6 +5,7 @@
 Welcome to the e-commerce butchery, The Meat Guy! This application is designed to provide users with a convenient way to purchase high-quality meat products online. Whether you're a meat enthusiast or just looking for fresh cuts, our platform has you covered.
 
 ## Table of Contents
+
 - [Features](#features)
 - [Tech Stacks](#tech-stacks)
 - [Usage](#usage)
@@ -12,7 +13,7 @@ Welcome to the e-commerce butchery, The Meat Guy! This application is designed t
 - [Shopping](#shopping)
 - [Cart Management](#cart-management)
 - [Checkout](#checkout)
-- [Contributing](#contributing)
+- [Wireframes](#contributing)
 
 ### Features
 
@@ -31,48 +32,40 @@ Style : Tailwind CSS
 Wireframe : Figma
 
 ## Usage
+
 ### Authentication
 
 - Users can create an account or log in using their email and password.
-- User authentication is handled securely through Firebase Authentication.
+- User authentication is handled securely through Firebase Authentication.\
+- Users who are not authenticated has limited access
+- User assigns role to be administrator or user
 
 ### Shopping
 
 - Browse products by category (e.g., beef, lamb, chicken).
-- Search for specific products.
 - View detailed product information, including images and prices.
 
 ### Cart Management
 
-- Add products to the shopping cart.
-- Update the quantity or remove items from the cart.
+- Add/Read/Delete/Update products in the shopping cart.
 - Calculate the subtotal, shipping, and total prices.
 
 ### Checkout
 
 - Proceed to checkout securely using Stripe.
-- Enter shipping information.
-- Review the order summary.
-- Complete the purchase with payment.
+- Review the order summary and complete the purchase with payment.
 - Receive confirmation and order details.
 
 ### Wireframes
- - FIGMA
 
-
-## Planning and Development Process
-
-I took inspiration from a few cryptocurrency tracking websites and made a wireframe on Figma. The app has to be able to extract latest data from the market. So I chose a reliable CoinGecko API. The app has to be simple enough for user to understand how to use it and display data intuitively.
-
-### Problem-Solving Strategy
-
-I had to break it down into smaller individual components and tackle it one step at a time. I had to rely on console.log() most of
-the time to ensure that I am on the right track. My source of knowledge has been supplemented from stackoverflow, mozilla, ChatGPT and YouTube.
+- FIGMA
 
 ### Unsolved problems
 
-Cryptocurrencies: User should be able to all crpytocurrencies.
+1. Order details page have some bugs
 
-NFT: Should be able to access more data when clicking on the NFT.
+2. Users who want to register as administrator should go through another verification method
 
-Watchlist: User should be able to add cryptocurrencies and NFTs to favourites.
+3. Implement discount code to offset the final amount
+
+4. Styling could be improved

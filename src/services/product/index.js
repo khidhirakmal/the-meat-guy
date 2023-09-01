@@ -1,6 +1,6 @@
 import Cookies from "js-cookie";
 
-// Create 
+// Create
 export const addNewProduct = async (formData) => {
   try {
     const response = await fetch("/api/admin/add-product", {
@@ -23,11 +23,15 @@ export const addNewProduct = async (formData) => {
 // Read
 export const getAllAdminProducts = async () => {
   try {
-    const res = await fetch("https://the-meat-guy-eight.vercel.app/api/admin/all-products", {
-      // require full URL path, if not will result in parse error
-      method: "GET",
-      cache: "no-store",
-    });
+    const res = await fetch(
+      "https://the-meat-guy-eight.vercel.app/api/admin/all-products",
+      // "http://localhost:3000/api/admin/all-products",
+      {
+        // require full URL path, if not will result in parse error
+        method: "GET",
+        cache: "no-store",
+      }
+    );
 
     const data = await res.json();
 
@@ -81,6 +85,7 @@ export const productByCategory = async (id) => {
   try {
     const res = await fetch(
       `https://the-meat-guy-eight.vercel.app/api/admin/product-by-category?id=${id}`,
+      // `http://localhost:3000/api/admin/product-by-category?id=${id}`,
       {
         method: "GET",
         cache: "no-store",
@@ -99,6 +104,7 @@ export const productById = async (id) => {
   try {
     const res = await fetch(
       `https://the-meat-guy-eight.vercel.app/api/admin/product-by-id?id=${id}`,
+      // `http://localhost:3000/api/admin/product-by-id?id=${id}`,
       {
         method: "GET",
         cache: "no-store",

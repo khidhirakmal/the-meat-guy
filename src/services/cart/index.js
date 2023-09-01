@@ -25,6 +25,7 @@ export const getAllCartItems = async (id) => {
   try {
     const res = await fetch(
       `https://the-meat-guy-eight.vercel.app/api/cart/all-cart-items?id=${id}`,
+      // `http://localhost:3000/api/cart/all-cart-items?id=${id}`,
       {
         method: "GET",
         headers: {

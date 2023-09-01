@@ -18,9 +18,9 @@ Welcome to the e-commerce butchery, The Meat Guy! This application is designed t
 ### Features
 
 - User authentication and authorization.
-- Browse and search for meat products by category.
-- Add products to the shopping cart.
-- Review and edit the shopping cart.
+- Unauthorized access management.
+- Filter meat products by category.
+- Add/Remove products to/from the shopping cart.
 - Secure checkout process with Stripe integration.
 - Order history and tracking.
 

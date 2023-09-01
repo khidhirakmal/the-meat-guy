@@ -23,7 +23,7 @@ export const addNewProduct = async (formData) => {
 // Read
 export const getAllAdminProducts = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/admin/all-products", {
+    const res = await fetch("https://the-meat-guy-eight.vercel.app/api/admin/all-products", {
       // require full URL path, if not will result in parse error
       method: "GET",
       cache: "no-store",
@@ -80,7 +80,7 @@ export const deleteProduct = async (id) => {
 export const productByCategory = async (id) => {
   try {
     const res = await fetch(
-      `http://localhost:3000/api/admin/product-by-category?id=${id}`,
+      `https://the-meat-guy-eight.vercel.app/api/admin/product-by-category?id=${id}`,
       {
         method: "GET",
         cache: "no-store",
@@ -98,7 +98,7 @@ export const productByCategory = async (id) => {
 export const productById = async (id) => {
   try {
     const res = await fetch(
-      `http://localhost:3000/api/admin/product-by-id?id=${id}`,
+      `https://the-meat-guy-eight.vercel.app/api/admin/product-by-id?id=${id}`,
       {
         method: "GET",
         cache: "no-store",

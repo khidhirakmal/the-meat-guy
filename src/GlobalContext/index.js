@@ -59,23 +59,48 @@ export default function GlobalState({ children }) {
   const [orderDetails, setOrderDetails] = useState(null);
   const [allOrdersForAllUsers, setAllOrdersForAllUsers] = useState([]);
 
-  /// CHECK USER AUTHENTICATION AND SET USER STATE  ///
+  // Function to get user data from localStorage
+  function getUserData() {
+    try {
+      const userDataString = localStorage.getItem("user");
+      return userDataString ? JSON.parse(userDataString) : null;
+    } catch (error) {
+      console.error("Error parsing user data from localStorage:", error);
+      return null;
+    }
+  }
+
+  // Function to get cart items from localStorage
+  function getCartItems() {
+    try {
+      const cartItemsString = localStorage.getItem("cartItems");
+      return cartItemsString ? JSON.parse(cartItemsString) : [];
+    } catch (error) {
+      console.error("Error parsing cart items from localStorage:", error);
+      return [];
+    }
+  }
+
+  // CHECK USER AUTHENTICATION AND SET USER STATE
   useEffect(() => {
     console.log(Cookies.get("token"));
+
     // Check if the "token" cookie is defined (user is authenticated)
-    if (Cookies.get("token") !== undefined) {
-      setIsAuthUser(true); // Set the "isAuthUser" state to true (user is authenticated)
+    const isAuthenticated = Cookies.get("token") !== undefined;
 
-      const userData = JSON.parse(localStorage.getItem("user") || {}); // Get user data from localStorage
-      setUser(userData); // Set the "user" state using the retrieved user data
+    setIsAuthUser(isAuthenticated); // Set the "isAuthUser" state
 
-      const getCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-      setCartItems(getCartItems); // Set the "cartItems" state using the retrieved data
+    if (isAuthenticated) {
+      // If authenticated, get and set user data and cart items
+      const userData = getUserData();
+      const cartItemsData = getCartItems();
+
+      setUser(userData); // Set the "user" state
+      setCartItems(cartItemsData); // Set the "cartItems" state
     } else {
-      setIsAuthUser(false); // Set the "isAuthUser" state to false (user is not authenticated)
-      setUser({}); // Set the "user" state using the retrieved user data, important to prevent unauthorized activities
+      setUser({}); // Set the "user" state to an empty object
     }
-  }, [Cookies]); // Dependency array with "Cookies" as the dependency
+  }, [Cookies]);
 
   /// PROTECT ROUTES FROM UNAUTHORIZED ACCESS ///
   const router = useRouter();
@@ -99,14 +124,15 @@ export default function GlobalState({ children }) {
 
   useEffect(() => {
     if (
-      pathName !== "/register" &&
-      !pathName.includes("product") &&
-      pathName !== "/" &&
-      user &&
-      Object.keys(user).length === 0 &&
-      protectedRoutes.includes(pathName) > -1
-    )
-      router.push("/login");
+      pathName !== "/register" && // Check if the current URL path is not "/register"
+      !(pathName.includes("product") || pathName.includes("promotions")) && // Check if the current URL path does not include the word "product" or "promotions"
+      pathName !== "/" && // Check if the current URL path is not the root ("/")
+      user && // Check if a user object exists (user is logged in)
+      Object.keys(user).length === 0 && // Check if the user object is empty (no user data)
+      protectedRoutes.includes(pathName) > -1 // Check if the current URL path is included in the "protectedRoutes" array
+    ) {
+      router.push("/login"); // If all the above conditions are met, redirect the user to the login page
+    }
   }, [user, pathName]);
 
   useEffect(() => {

@@ -30,21 +30,21 @@ export default function CartModal() {
       const updatedData =
         res.data && res.data.length
           ? res.data.map((item) => ({
+              key: item.id,
               ...item,
               productID: {
                 ...item.productID,
                 // Calculate discounted price if the product is on sale
                 price:
                   item.productID.onSale === "yes"
-                    ? (
-                        parseFloat(item.productID.price) -
-                        parseFloat(item.productID.price) *
-                          (parseFloat(item.productID.priceDrop) / 100)
-                      ).toLocaleString(undefined, {
-                        minimumFractionDigits: 2,
-                        maximumFractionDigits: 2,
-                      })
-                    : item.productID.price.toFixed(2),
+                    ? parseInt(
+                        (
+                          item.productID.price -
+                          item.productID.price *
+                            (item.productID.priceDrop / 100)
+                        ).toFixed(2)
+                      )
+                    : item.productID.price,
               },
             }))
           : [];
@@ -121,12 +121,12 @@ export default function CartModal() {
                         </a>
                       </h3>
                     </div>
-                    <p className="mt-1 text-sm text-gray-600">
+                    <div className="mt-1 text-sm text-gray-600">
                       $
                       {cartItem &&
                         cartItem.productID &&
                         cartItem.productID.price}
-                    </p>
+                    </div>
                   </div>
                   <div className="flex flex-1 items-end justify-between text-sm">
                     <button

@@ -31,7 +31,7 @@ export async function POST(req) {
         });
       }
 
-      console.log(productID, userID);
+      // console.log(productID, userID);
 
       // Check if the current cart item already exists for the user
       const isCurrentCartItemAlreadyExists = await Cart.find({
@@ -39,7 +39,7 @@ export async function POST(req) {
         userID: userID,
       });
 
-      console.log(isCurrentCartItemAlreadyExists);
+      // console.log(isCurrentCartItemAlreadyExists);
 
       if (isCurrentCartItemAlreadyExists?.length > 0) {
         // Return an error response if the product is already in the cart
@@ -53,7 +53,7 @@ export async function POST(req) {
       // Create a new cart item and save it to the database
       const saveProductToCart = await Cart.create(data);
 
-      console.log(saveProductToCart);
+      // console.log(saveProductToCart);
 
       if (saveProductToCart) {
         return NextResponse.json({

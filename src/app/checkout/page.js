@@ -36,7 +36,7 @@ export default function Checkout() {
     "pk_test_51NlMX4DViPqAZ3sZ7ZjAkNByBIuT0yuuujAurnvApN7Eb3dbiQrgnJJmnIjHZhQpy4o3ulVGn9R7ctP6jeOpaiK400W3Zt7v6P";
   const stripePromise = loadStripe(publishableKey);
 
-  console.log(cartItems);
+  // console.log(cartItems);
 
   // Fetch all user addresses and store them in state
   async function getAllAddresses() {
@@ -169,11 +169,11 @@ export default function Checkout() {
       sessionId: res.id,
     });
 
-    console.log("sessionId", sessionId);
+    // console.log("sessionId", sessionId);
     console.log(error);
   }
 
-  console.log(checkoutFormData);
+  // console.log(checkoutFormData);
 
   useEffect(() => {
     if (orderSuccess) {

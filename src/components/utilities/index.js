@@ -200,17 +200,6 @@ export const firebaseConfig = {
 
 export const firebaseStorageURL = "gs://the-meat-guy.appspot.com";
 
-// export const firebaseConfig = {
-//   apiKey: process.env.FIREBASE_API_KEY,
-//   authDomain: process.env.FIREBASE_AUTHDOMAIN,
-//   projectId: process.env.FIREBASE_PROJECTID,
-//   storageBucket: process.env.FIREBASE_STORAGEBUCKET,
-//   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDERID,
-//   appId: process.env.FIREBASE_APPID,
-//   measurementId: process.env.FIREBASE_MEASUREMENTID,
-// };
-// export const firebaseStorageURL = process.env.FIREBASE_STORAGE_URL;
-
 export const addNewAddressFormControls = [
   {
     id: "fullName",

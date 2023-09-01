@@ -83,7 +83,7 @@ export default function GlobalState({ children }) {
 
   // CHECK USER AUTHENTICATION AND SET USER STATE
   useEffect(() => {
-    console.log(Cookies.get("token"));
+    // console.log(Cookies.get("token"));
 
     // Check if the "token" cookie is defined (user is authenticated)
     const isAuthenticated = Cookies.get("token") !== undefined;

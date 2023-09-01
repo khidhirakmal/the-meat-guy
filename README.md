@@ -13,7 +13,7 @@ Welcome to the e-commerce butchery, The Meat Guy! This application is designed t
 - [Shopping](#shopping)
 - [Cart Management](#cart-management)
 - [Checkout](#checkout)
-- [Wireframes](#contributing)
+- [Wireframes](#wireframes)
 
 ### Features
 
@@ -59,6 +59,12 @@ Wireframe : Figma
 ### Wireframes
 
 - FIGMA
+- Home ![image](https://github.com/khidhirakmal/the-meat-guy/assets/125201926/8d3d6338-1937-40c5-94e8-14d5396f66bd)
+- Shop ![image](https://github.com/khidhirakmal/the-meat-guy/assets/125201926/b6044832-ce99-4552-877e-8be6c0f7f5dd)
+- Admin ![image](https://github.com/khidhirakmal/the-meat-guy/assets/125201926/fba96257-9024-4322-b686-2a9f05782138)
+
+
+
 
 ### Unsolved problems
 

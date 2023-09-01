@@ -23,7 +23,7 @@ export default function Home() {
     getListOfProducts();
   }, []);
 
-  console.log(products);
+  // console.log(products);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -35,7 +35,7 @@ export default function Home() {
             </h1>
             <div className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg ">
               <p>
-                At The Meat Guy, we're not your typical butchery; we're the
+                At The Meat Guy, we are not your typical butchery. We are the
                 meaty mavericks who take your taste buds on an unforgettable
                 joyride through the carnivore's paradise.
               </p>

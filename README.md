@@ -1,34 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# THE MEAT GUY
 
-## Getting Started
+## Description
 
-First, run the development server:
+Welcome to the e-commerce butchery, The Meat Guy! This application is designed to provide users with a convenient way to purchase high-quality meat products online. Whether you're a meat enthusiast or just looking for fresh cuts, our platform has you covered.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Table of Contents
+- [Features](#features)
+- [Tech Stacks](#tech-stacks)
+- [Usage](#usage)
+- [Authentication](#authentication)
+- [Shopping](#shopping)
+- [Cart Management](#cart-management)
+- [Checkout](#checkout)
+- [Contributing](#contributing)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- User authentication and authorization.
+- Browse and search for meat products by category.
+- Add products to the shopping cart.
+- Review and edit the shopping cart.
+- Secure checkout process with Stripe integration.
+- Order history and tracking.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Tech Stacks
 
-## Learn More
+Language: Javascript
+Library: NEXT.js
+Style : Tailwind CSS
+Wireframe : Figma
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
+### Authentication
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Users can create an account or log in using their email and password.
+- User authentication is handled securely through Firebase Authentication.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Shopping
 
-## Deploy on Vercel
+- Browse products by category (e.g., beef, lamb, chicken).
+- Search for specific products.
+- View detailed product information, including images and prices.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Cart Management
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Add products to the shopping cart.
+- Update the quantity or remove items from the cart.
+- Calculate the subtotal, shipping, and total prices.
+
+### Checkout
+
+- Proceed to checkout securely using Stripe.
+- Enter shipping information.
+- Review the order summary.
+- Complete the purchase with payment.
+- Receive confirmation and order details.
+
+### Wireframes
+ - FIGMA
+
+
+## Planning and Development Process
+
+I took inspiration from a few cryptocurrency tracking websites and made a wireframe on Figma. The app has to be able to extract latest data from the market. So I chose a reliable CoinGecko API. The app has to be simple enough for user to understand how to use it and display data intuitively.
+
+### Problem-Solving Strategy
+
+I had to break it down into smaller individual components and tackle it one step at a time. I had to rely on console.log() most of
+the time to ensure that I am on the right track. My source of knowledge has been supplemented from stackoverflow, mozilla, ChatGPT and YouTube.
+
+### Unsolved problems
+
+Cryptocurrencies: User should be able to all crpytocurrencies.
+
+NFT: Should be able to access more data when clicking on the NFT.
+
+Watchlist: User should be able to add cryptocurrencies and NFTs to favourites.

@@ -53,7 +53,7 @@ export default function CartModal() {
       localStorage.setItem("cartItems", JSON.stringify(updatedData));
     }
 
-    console.log("All Cart Items", res);
+    // console.log("All Cart Items", res);
   }
 
   // Fetch cart items when the 'user' state changes

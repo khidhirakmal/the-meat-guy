@@ -68,18 +68,18 @@ export default function Navbar() {
       setCurrentUpdatedProduct(null);
   }, [pathName]);
 
-  console.log(currentUpdatedProduct, "navbar");
+  // console.log(currentUpdatedProduct, "navbar");
 
   // Shows current user and authentication
-  console.log(
-    "Current User:",
-    user ? user.name : null,
-    " Authenticated:",
-    isAuthUser
-  );
+  // console.log(
+  //   "Current User:",
+  //   user ? user.name : null,
+  //   " Authenticated:",
+  //   isAuthUser
+  // );
 
   // Shows current path
-  console.log("Current Path:", pathName);
+  // console.log("Current Path:", pathName);
 
   function handleLogout() {
     setIsAuthUser(false);

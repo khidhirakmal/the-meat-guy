@@ -61,7 +61,7 @@ export default function ProductButton({ item }) {
       setShowCartModal(true);
     }
 
-    console.log(res);
+    // console.log(res);
   }
 
   return isAdminView ? (

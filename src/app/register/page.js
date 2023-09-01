@@ -3,6 +3,7 @@
 import ComponentLevelLoader from "@/components/ComponentLevelLoader";
 import InputComponent from "@/components/FormElements/InputComponent";
 import SelectComponent from "@/components/FormElements/SelectComponent";
+import Notification from "@/components/Notification";
 import { registrationFormControls } from "@/components/utilities";
 import { GlobalContext } from "@/GlobalContext";
 import { registerNewUser } from "@/services/register";
@@ -25,7 +26,7 @@ export default function Register() {
 
   const router = useRouter();
 
-  console.log(formData);
+  // console.log(formData);
 
   function isFormValid() {
     return formData &&
@@ -39,7 +40,7 @@ export default function Register() {
       : false;
   }
 
-  console.log(isFormValid());
+  // console.log(isFormValid());
 
   async function handleRegisterOnSubmit() {
     setPageLevelLoader(true);
@@ -60,7 +61,7 @@ export default function Register() {
       setFormData(initialFormData);
     }
 
-    console.log(data);
+    // console.log(data);
   }
 
   // if authenticated, routes to homepage

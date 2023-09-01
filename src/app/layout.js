@@ -1,5 +1,5 @@
 // Root Layout
-import GlobalState from "@/context";
+import GlobalState from "@/GlobalContext";
 import "./globals.css";
 import { Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
@@ -21,7 +21,9 @@ export default function RootLayout({ children }) {
       <body className={roboto.className}>
         <GlobalState>
           <Navbar />
-          <main>{children}</main>
+          <main className="bg-white flex min-h-screen flex-col mt-[120.5px]">
+            {children}
+          </main>
         </GlobalState>
       </body>
     </html>

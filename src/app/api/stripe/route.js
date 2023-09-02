@@ -2,9 +2,7 @@ import AuthUser from "@/middleware/AuthUser";
 import { NextResponse } from "next/server";
 
 // Secret Key
-const stripe = require("stripe")(
-  "sk_test_51NlMX4DViPqAZ3sZtZrLipiMTGR0fVs4KRVI6sgR4sUk8XnAYbUFqii557QXXQi3enuiQwkQtlOSDi3eEMEa8yhv00PnQwvoe7"
-);
+const stripe = require("stripe")(`${process.env.SECRET_KEY}`);
 
 export const dynamic = "force-dynamic";
 
@@ -18,8 +16,10 @@ export async function POST(req) {
         payment_method_types: ["card"],
         line_items: res,
         mode: "payment",
-        success_url: "https://the-meat-guy-eight.vercel.app/checkout" + "?status=success",
-        cancel_url: "https://the-meat-guy-eight.vercel.app/checkout" + "?status=cancel",
+        success_url:
+          "https://the-meat-guy-eight.vercel.app/checkout" + "?status=success",
+        cancel_url:
+          "https://the-meat-guy-eight.vercel.app/checkout" + "?status=cancel",
         // success_url: "http://localhost:3000/checkout" + "?status=success",
         // cancel_url: "http://localhost:3000/checkout" + "?status=cancel",
       });

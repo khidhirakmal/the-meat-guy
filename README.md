@@ -1,4 +1,4 @@
-# THE MEAT GUY - https://the-meat-guy-eight.vercel.app/
+# [The Meat Guy](https://the-meat-guy-eight.vercel.app/)
 
 ## Description
 

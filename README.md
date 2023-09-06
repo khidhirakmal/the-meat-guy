@@ -28,6 +28,7 @@ Welcome to the e-commerce butchery, The Meat Guy! This application is designed t
 
 Language: Javascript
 Library: NEXT.js
+Database: MongoDB
 Style : Tailwind CSS
 Wireframe : Figma
 
